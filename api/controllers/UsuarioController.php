@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__ . '/models/Usuario.php';
-require_once __DIR__ . '/interfaces/IApiUsable.php';
+require_once __DIR__ . '/../models/Usuario.php';
+require_once __DIR__ . '/../interfaces/IApiUsable.php';
 
 class UsuarioController extends Usuario implements IApiUsable
 {
