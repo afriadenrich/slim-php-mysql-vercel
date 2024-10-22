@@ -65,4 +65,23 @@ Proyecto de PHP + Slim Framework con lo justo y necesario para funcionar
 
 - No olvidar darle a save!!
 
-20. 
+20. Volvemos al apartado del storage y corremos la / las querys necesarias para crear nuestras tablas.
+
+```
+  CREATE TABLE usuarios (
+  id SERIAL PRIMARY KEY,
+  usuario VARCHAR(250) NOT NULL,
+  clave VARCHAR(250) NOT NULL,
+  fechaBaja DATE DEFAULT NULL
+);
+```
+
+![image](https://github.com/user-attachments/assets/d5551ab3-7e53-416e-a2a6-e690c38b1855)
+
+![image](https://github.com/user-attachments/assets/f792a150-fc10-4773-901f-7024d57b65b8)
+
+21. Listo! Prueben las rutas /usuarios por post, enviando **nombre** y **clave** por body, y luego la ruta /usuarios por GET
+
+![{5FCEF403-573F-4440-B935-1B38B6C0AFB2}](https://github.com/user-attachments/assets/ce842147-fec1-48c2-9ebc-75b1dce506a8)
+
+![{B5DE8D4D-90B7-4FB2-8810-B4DA60ED1640}](https://github.com/user-attachments/assets/c6e7dab4-ffa7-4011-9e0e-78f32c2bd233)
