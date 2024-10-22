@@ -7,8 +7,10 @@ class AccesoDatos
     private function __construct()
     {
         try {
-            $this->objetoPDO = new PDO('pgsql:host='.$_ENV['POSTGRES_HOST'].';dbname='.$_ENV['POSTGRES_DATABASE'].';charset=utf8', $_ENV['POSTGRES_USER'], $_ENV['POSTGRES_PASSWORD'], array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-            $this->objetoPDO->exec("SET CHARACTER SET utf8");
+            $this->objetoPDO = new PDO('pgsql:host='.$_ENV['POSTGRES_HOST'].';dbname='.$_ENV['POSTGRES_DATABASE'].';charset=utf8', $_ENV['POSTGRES_USER'], $_ENV['POSTGRES_PASSWORD'], 
+            array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
+            // $this->objetoPDO->exec("SET CHARACTER SET utf8");
         } catch (PDOException $e) {
             print "Error: " . $e->getMessage();
             die();
