@@ -85,3 +85,17 @@ Proyecto de PHP + Slim Framework con lo justo y necesario para funcionar
 ![{5FCEF403-573F-4440-B935-1B38B6C0AFB2}](https://github.com/user-attachments/assets/ce842147-fec1-48c2-9ebc-75b1dce506a8)
 
 ![{B5DE8D4D-90B7-4FB2-8810-B4DA60ED1640}](https://github.com/user-attachments/assets/c6e7dab4-ffa7-4011-9e0e-78f32c2bd233)
+
+# Recuerden
+
+Miren los archivos antes de probar todo. 
+
+Q. ¿Qué hay en el index?
+A. Queda en ustedes ver  eso.
+
+Q. ¿Qué hay en el AccesoDatos.php, cómo conecta a la DB?
+A. Está preparado para poder conectar a una base mysql y una postgres, 
+
+Q. ¿De dónde salen los datos de $_ENV? 
+A. En Vercel salen del paso 17 / 18. En el local, pueden mirar el archivo .env.example. Ese archivo sirve de ejemplo para que puedan crear su propio archivo de ambiente. 
+Si crean en la base del proyecto un archivo .env y colocan ahí sus variables de ambiente, debería funcionar correctamente. De ahí salen los datos del array $_ENV.
