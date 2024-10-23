@@ -7,10 +7,19 @@ class AccesoDatos
     private function __construct()
     {
         try {
-            $this->objetoPDO = new PDO('pgsql:host='.$_ENV['POSTGRES_HOST'].';dbname='.$_ENV['POSTGRES_DATABASE'], $_ENV['POSTGRES_USER'], $_ENV['POSTGRES_PASSWORD'], 
-            array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+            $dbType = $_ENV["DB_TYPE"];
+            if($dbType === "mysql"){
+                $this->objetoPDO = new PDO('mysql:host='.$_ENV['MYSQL_HOST'].';dbname='.$_ENV['MYSQL_DATABASE'], $_ENV['MYSQL_USER'], $_ENV['MYSQL_PASSWORD'], 
+                array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+                $this->objetoPDO->exec("SET CHARACTER SET utf8");
+            } else 
+            if($dbType === "pgsql"){
+                $this->objetoPDO = new PDO('pgsql:host='.$_ENV['POSTGRES_HOST'].';dbname='.$_ENV['POSTGRES_DATABASE'], $_ENV['POSTGRES_USER'], $_ENV['POSTGRES_PASSWORD'], 
+                array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
-            // $this->objetoPDO->exec("SET CHARACTER SET utf8");
+                // Postgress da error si se configura el charset.
+            }
+
         } catch (PDOException $e) {
             print "Error: " . $e->getMessage();
             die();
