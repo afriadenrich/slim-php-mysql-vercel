@@ -63,7 +63,13 @@ Proyecto de PHP + Slim Framework con lo justo y necesario para funcionar
 
 ![{894DA115-E411-4CD7-8C9B-B79EC7D1C1E6}](https://github.com/user-attachments/assets/e1b74245-06f0-455f-9e8b-3bf97e38833c)
 
+- Falta agregar un clave / valor que agregamos luego de modificar el proyecto. Ver el archivo .env.example para más info.
+Falta agregar: DB_TYPE=pgsql
+
+![{45239C0B-273C-4A5F-A610-7498C7AD0777}](https://github.com/user-attachments/assets/b44bb22e-1888-4870-a2a3-e354e09b191e)
+
 - No olvidar darle a save!!
+
 
 20. Volvemos al apartado del storage y corremos la / las querys necesarias para crear nuestras tablas.
 
